@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EF_CodeFirst_Tutorial_1_
+﻿namespace EF_CodeFirst_Tutorial_1_
 {
     class Program
     {
@@ -8,15 +6,10 @@ namespace EF_CodeFirst_Tutorial_1_
         {
             using (var context = new SchoolContext())
             {
-                Student student = new Student() { StudentName = "Anna" };
+                Student student = new Student() { StudentName = "Maria" };
 
                 context.Students.Add(student);
                 context.SaveChanges();
-                foreach(var stud in context.Students)
-                {
-                    Console.WriteLine(stud.StudentName);
-                    Console.ReadLine();
-                }
             }
         }
     }
