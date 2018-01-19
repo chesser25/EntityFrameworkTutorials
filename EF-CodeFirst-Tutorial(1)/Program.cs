@@ -6,7 +6,7 @@
         {
             using (var context = new SchoolContext())
             {
-                Student student = new Student() { StudentName = "Maria" };
+                Student student = new Student() { StudentName = "Helena" };
 
                 context.Students.Add(student);
                 context.SaveChanges();
