@@ -24,9 +24,9 @@ namespace EF_CodeFirst_Tutorial_1_
         public float Weight { get; set; }
         public int IQ { get; set; }
 
-        //public int StandardId { get; set; }
+        public int StandardId { get; set; }
 
-        //[ForeignKey("StandardId")]
+        [ForeignKey("StandardId")]
         public virtual Standard Standard { get; set; }
 
         public Teacher Teacher { get; set; }

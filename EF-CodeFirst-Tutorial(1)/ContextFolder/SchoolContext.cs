@@ -6,7 +6,7 @@ namespace EF_CodeFirst_Tutorial_1_
     {
         public SchoolContext(): base("name=SchoolDBConnectionString")
         {
-            Database.SetInitializer<SchoolContext>(new DropCreateDatabaseAlways<SchoolContext>());
+            Database.SetInitializer<SchoolContext>(new DropCreateDatabaseIfModelChanges<SchoolContext>());
         }
 
         public DbSet<Student> Students { get; set; }
